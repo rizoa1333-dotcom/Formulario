@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102c32">
+<title>Cuéntanos de tu gimnasio | Brief web</title>
+<style>
+:root{--ink:#102c32;--muted:#5d7274;--paper:#f4f7f5;--card:#fff;--line:#dce5e1;--green:#1a8b68;--lime:#d8ff6a;--soft:#eaf4ef;--radius:18px}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}header{background:var(--ink);color:white;padding:32px 20px 30px}.wrap{max-width:850px;margin:auto}header .eyebrow{font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--lime)}h1{font-size:clamp(30px,6vw,48px);line-height:1.03;letter-spacing:-.04em;margin:13px 0 12px}header p{max-width:620px;color:#d5e4df;margin:0}.progress{margin:20px auto 0;max-width:850px;padding:0 20px}.progressbar{height:6px;background:#dce5e1;border-radius:9px;overflow:hidden}.progressbar span{display:block;width:0;height:100%;background:var(--green);transition:width .2s}.progresslabel{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-top:6px}.main{max-width:850px;padding:16px 20px 50px;margin:auto}.note{margin:8px 0 18px;border-left:4px solid var(--green);padding:10px 14px;background:var(--soft);border-radius:0 12px 12px 0;color:#264c43;font-size:14px}.section{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;margin:16px 0;box-shadow:0 5px 18px #102c3208}.sectionhead{display:flex;align-items:flex-start;gap:12px;margin-bottom:17px}.num{flex:0 0 34px;height:34px;display:grid;place-items:center;background:var(--soft);color:var(--green);border-radius:10px;font-weight:800}.section h2{font-size:20px;line-height:1.15;margin:1px 0 4px;letter-spacing:-.02em}.sectionhead p{margin:0;color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px}.field{min-width:0}.field.full{grid-column:1/-1}label,.label{display:block;font-size:13px;font-weight:750;margin:0 0 6px}.required{color:#bd4b36}input,textarea,select{width:100%;font:inherit;font-size:15px;color:var(--ink);background:#fff;border:1px solid #cbd8d3;border-radius:10px;padding:11px 12px;outline:0}input:focus,textarea:focus,select:focus{border-color:var(--green);box-shadow:0 0 0 3px #1a8b6818}textarea{min-height:88px;resize:vertical}textarea.tall{min-height:120px}.hint{font-size:12px;color:var(--muted);margin:5px 0 0}.checks{display:flex;flex-wrap:wrap;gap:8px}.check{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:999px;padding:8px 11px;font-size:13px;font-weight:600;background:#fff}.check input{width:16px;height:16px;accent-color:var(--green);padding:0}.actions{position:sticky;bottom:12px;z-index:2;display:flex;justify-content:center;margin:24px auto 10px}.send{border:0;border-radius:999px;background:var(--green);color:white;padding:15px 24px;font:inherit;font-weight:800;box-shadow:0 8px 20px #145b4535;cursor:pointer}.send:hover{background:#116f53}.send:focus-visible{outline:3px solid var(--lime);outline-offset:3px}.after{color:var(--muted);font-size:12px;text-align:center;margin:8px auto 0;max-width:600px}.admin{max-width:850px;margin:10px auto 20px;padding:0 20px}.admin details{font-size:12px;color:var(--muted)}.admin summary{cursor:pointer}.admin .setup{display:flex;gap:8px;align-items:end;margin-top:8px;max-width:540px}.admin .setup input{font-size:13px;padding:8px}.admin button{border:1px solid var(--line);background:white;border-radius:8px;padding:8px 11px;cursor:pointer;color:var(--ink)}.status{font-size:12px;margin:6px 0 0;color:var(--green)}footer{text-align:center;padding:12px 20px 28px;font-size:12px;color:var(--muted)}@media(max-width:600px){header{padding:25px 18px}.main{padding:12px 14px 38px}.section{padding:19px 16px;margin:12px 0}.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.section h2{font-size:18px}.admin .setup{align-items:stretch;flex-direction:column}.send{width:100%;max-width:430px}.actions{padding:0 8px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">Brief para crear tu sitio web</div><h1>Cuéntanos de tu gimnasio.</h1><p>Completa este formulario para preparar una página que explique tus clases, horarios y planes y facilite que nuevas personas te contacten.</p></div></header>
+<div class="progress"><div class="progressbar"><span id="progressFill"></span></div><div class="progresslabel"><span>Tu avance</span><span id="progressText">0% completado</span></div></div>
+<main class="main"><div class="note">Toma unos 5 minutos. Los campos con <b class="required">*</b> son necesarios para empezar. Si aún no tienes un dato, escribe “por definir”.</div>
+<form id="intake">
+<section class="section"><div class="sectionhead"><span class="num">01</span><div><h2>Tu negocio y cómo contactarte</h2><p>Información básica para ubicarte y recibir consultas.</p></div></div><div class="grid">
+<div class="field"><label for="business">Nombre comercial <span class="required">*</span></label><input id="business" name="Nombre comercial" required placeholder="Nombre de tu gimnasio"></div>
+<div class="field"><label for="contact">Persona de contacto <span class="required">*</span></label><input id="contact" name="Persona de contacto" required placeholder="Nombre y cargo"></div>
+<div class="field"><label for="phone">WhatsApp del gimnasio <span class="required">*</span></label><input id="phone" name="WhatsApp del gimnasio" required inputmode="tel" placeholder="Ej. 312 123 4567"></div>
+<div class="field"><label for="email">Correo público</label><input id="email" name="Correo público" type="email" placeholder="hola@tugimnasio.com"></div>
+<div class="field full"><label for="address">Dirección completa <span class="required">*</span></label><input id="address" name="Dirección" required placeholder="Calle, número, colonia, municipio"></div>
+<div class="field"><label for="maps">Enlace de Google Maps</label><input id="maps" name="Google Maps" type="url" placeholder="https://maps.app.goo.gl/..."></div>
+<div class="field"><label for="social">Redes sociales</label><input id="social" name="Redes sociales" placeholder="Enlaces o nombres de usuario"></div>
+<div class="field full"><label for="hours">Horario de atención <span class="required">*</span></label><textarea id="hours" name="Horario de atención" required placeholder="Lunes a viernes 6:00–21:00; sábado 8:00–13:00..."></textarea></div>
+</div></section>
+<section class="section"><div class="sectionhead"><span class="num">02</span><div><h2>Clases y propuesta</h2><p>Ayuda a tus futuros alumnos a entender qué ofreces y para quién.</p></div></div><div class="grid">
+<div class="field full"><label for="about">¿Qué hace especial a tu gimnasio? <span class="required">*</span></label><textarea id="about" name="Diferenciador" required placeholder="Cuéntanos brevemente qué experiencia ofreces y por qué te eligen."></textarea></div>
+<div class="field"><label for="audience">¿A quién quieren atraer?</label><input id="audience" name="Público objetivo" placeholder="Principiantes, atletas, adultos... "></div>
+<div class="field"><label for="services">Clases y servicios <span class="required">*</span></label><textarea id="services" name="Clases y servicios" required placeholder="Entrenamiento funcional, pesas, clases personales..."></textarea></div>
+<div class="field full"><label for="schedule">Horario de clases por día <span class="required">*</span></label><textarea class="tall" id="schedule" name="Horario de clases" required placeholder="Lunes: 7:00 funcional, 18:00 fuerza…"></textarea></div>
+</div></section>
+<section class="section"><div class="sectionhead"><span class="num">03</span><div><h2>Planes e inscripción</h2><p>Precios claros y un siguiente paso sencillo generan confianza.</p></div></div><div class="grid">
+<div class="field full"><label for="plans">Membresías o paquetes <span class="required">*</span></label><textarea class="tall" id="plans" name="Planes y precios" required placeholder="Plan mensual — $___ — incluye…"></textarea></div>
+<div class="field"><label for="trial">Clase muestra o promoción</label><textarea id="trial" name="Clase muestra o promoción" placeholder="Precio, condiciones y vigencia"></textarea></div>
+<div class="field"><label for="signup">¿Cómo reservan o se inscriben?</label><textarea id="signup" name="Proceso de inscripción" placeholder="Pasos, contacto y forma de pago"></textarea></div>
+<div class="field full"><span class="label">Formas de pago</span><div class="checks"><label class="check"><input type="checkbox" name="Pagos" value="Efectivo">Efectivo</label><label class="check"><input type="checkbox" name="Pagos" value="Transferencia">Transferencia</label><label class="check"><input type="checkbox" name="Pagos" value="Tarjeta">Tarjeta</label><label class="check"><input type="checkbox" name="Pagos" value="Otro">Otro</label></div></div>
+<div class="field full"><label for="rules">Reglas o detalles que deben saber antes de ir</label><textarea id="rules" name="Reglas y recomendaciones" placeholder="Qué llevar, reservaciones, cancelaciones, edad mínima..."></textarea></div>
+</div></section>
+<section class="section"><div class="sectionhead"><span class="num">04</span><div><h2>Equipo, instalaciones y confianza</h2><p>Comparte lo que ayuda a una persona nueva a sentirse segura para visitarte.</p></div></div><div class="grid">
+<div class="field"><label for="team">Entrenadores y especialidades</label><textarea id="team" name="Entrenadores" placeholder="Nombres, experiencia, certificaciones relevantes"></textarea></div>
+<div class="field"><label for="facility">Instalaciones y equipo</label><textarea id="facility" name="Instalaciones" placeholder="Áreas, aparatos, vestidores, regaderas…"></textarea></div>
+<div class="field full"><label for="testimonials">Testimonios autorizados</label><textarea id="testimonials" name="Testimonios" placeholder="Opinión y nombre o iniciales de quien autoriza publicarla"></textarea></div>
+<div class="field full"><label for="faqs">Preguntas frecuentes y respuestas</label><textarea class="tall" id="faqs" name="Preguntas frecuentes" placeholder="¿Necesito experiencia? No, recibimos principiantes…"></textarea></div>
+<div class="field full"><label for="access">Acceso, estacionamiento u otras facilidades</label><input id="access" name="Acceso y facilidades" placeholder="Cómo llegar, estacionamiento, accesibilidad, etc."></div>
+</div></section>
+<section class="section"><div class="sectionhead"><span class="num">05</span><div><h2>Estilo, fotos y publicación</h2><p>Las imágenes y referencias ayudan a que la web se sienta como tu marca.</p></div></div><div class="grid">
+<div class="field"><label for="style">Estilo visual que prefieren</label><select id="style" name="Estilo visual"><option value="">Elige una opción</option><option>Energético</option><option>Limpio y moderno</option><option>Premium</option><option>Urbano</option><option>Otro / por definir</option></select></div>
+<div class="field"><label for="colors">Colores o páginas de referencia</label><input id="colors" name="Colores y referencias" placeholder="Colores, enlaces o ideas"></div>
+<div class="field full"><label for="assets">Fotos y logotipo disponibles</label><textarea id="assets" name="Material disponible" placeholder="Describe qué tienes: logo, fotos del espacio, clases, equipo..."></textarea><p class="hint">El formulario enviará tus respuestas en texto. Después del envío, adjunta las fotos y el logotipo en el mismo chat de WhatsApp.</p></div>
+<div class="field"><label for="domain">Dominio deseado, si ya tienen uno</label><input id="domain" name="Dominio deseado" placeholder="tugimnasio.com"></div>
+<div class="field"><label for="privacy">Aviso de privacidad o enlace existente</label><input id="privacy" name="Aviso de privacidad" placeholder="Enlace o por definir"></div>
+<div class="field full"><label for="avoid">¿Qué no debemos publicar?</label><textarea id="avoid" name="Información que no publicar" placeholder="Fotos, precios o datos que debamos excluir"></textarea></div>
+<div class="field"><label for="launch">Fecha ideal de publicación</label><input id="launch" name="Fecha ideal" placeholder="Por definir"></div>
+<div class="field"><label for="approver">Quién aprobará el contenido</label><input id="approver" name="Aprobación final" placeholder="Nombre y medio de contacto"></div>
+</div></section>
+<div class="actions"><button class="send" type="submit">Enviar mis respuestas por WhatsApp&nbsp; ↗</button></div><p class="after">Se abrirá WhatsApp con el mensaje preparado. Revísalo y toca “Enviar”. Puedes mandar fotos y el logotipo en ese mismo chat.</p>
+</form></main>
+<div class="admin"><details><summary>Configuración del formulario (solo para quien administra)</summary><div class="setup"><div style="flex:1"><label for="dest">Número de WhatsApp que recibirá las respuestas</label><input id="dest" inputmode="numeric" placeholder="Código de país + número, solo dígitos"></div><button id="saveDest" type="button">Guardar en este navegador</button></div><p class="hint">Puedes guardar el número aquí para probar. Para que quede configurado para todas las personas en la página publicada, agrega ?wa=CODIGOPAISNUMERO al enlace o solicita que se establezca en el archivo.</p><p id="destStatus" class="status" aria-live="polite"></p></details></div>
+<footer>Al enviar, confirmas que tienes permiso para compartir los datos, fotos y testimonios que incluyas.</footer>
+<script>
+const form=document.getElementById('intake');
+const params=new URLSearchParams(location.search);
+const defaultWhatsApp='523121301972';
+const stored=localStorage.getItem('briefGymWhatsApp')||'';
+const initial=(params.get('wa')||stored||defaultWhatsApp).replace(/\D/g,'');
+document.getElementById('dest').value=initial;
+if(initial) document.getElementById('destStatus').textContent='Número configurado para este enlace o navegador.';
+const required=[...form.querySelectorAll('[required]')];
+function updateProgress(){const done=required.filter(x=>x.value.trim()).length;const pc=Math.round(done/required.length*100);document.getElementById('progressFill').style.width=pc+'%';document.getElementById('progressText').textContent=pc+'% completado';}
+form.addEventListener('input',updateProgress);updateProgress();
+document.getElementById('saveDest').addEventListener('click',()=>{const n=document.getElementById('dest').value.replace(/\D/g,'');if(n){localStorage.setItem('briefGymWhatsApp',n);document.getElementById('destStatus').textContent='Guardado en este navegador. Para compartirlo configurado, usa ?wa='+n+' en el enlace.';}else{localStorage.removeItem('briefGymWhatsApp');document.getElementById('destStatus').textContent='Escribe el número con código de país, solo dígitos.';}});
+form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;const fd=new FormData(form);const groups={};for(const [key,val] of fd.entries()){if(key==='Pagos'){(groups[key]??=[]).push(val);}else groups[key]=val.trim();}let message='Hola, quiero compartir la información de mi gimnasio para preparar mi página web.\n\n';for(const [key,val] of Object.entries(groups)){const clean=Array.isArray(val)?val.join(', '):val;if(clean)message+=`*${key}:* ${clean}\n`;}
+message+='\nPuedo enviar fotos y logotipo en este mismo chat.';const phone=(params.get('wa')||localStorage.getItem('briefGymWhatsApp')||defaultWhatsApp).replace(/\D/g,'');const url=`https://wa.me/${phone}?text=${encodeURIComponent(message)}`;window.open(url,'_blank','noopener,noreferrer');});
+</script>
+</body>
+</html>
+
+
